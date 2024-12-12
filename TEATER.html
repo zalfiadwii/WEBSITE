@@ -1,0 +1,218 @@
+
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Penampilan Teater</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3ec; /* Coklat muda */
+            color: #5c4033; /* Coklat tua */
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #d3a298; /* Coklat lembut */
+            padding: 30px 0;
+            text-align: center;
+            color: rgb(129, 84, 49);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Mengatur tata letak grid untuk tiga kolom */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif dengan grid auto */
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Styling untuk setiap item grid */
+        .grid-item {
+            background: linear-gradient(145deg, #f2f2f2, #e6e6e6); /* Warna latar belakang gradien */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efek saat item disorot */
+        .grid-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling untuk judul */
+        h3 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Styling untuk paragraf */
+        p {
+            font-size: 1rem;
+            color: #34495e;
+            line-height: 1.5;
+            text-align: justify; /* Menambahkan justify agar teks rata kiri-kanan */
+        }
+
+        /* Gambar responsif */
+        .container img {
+            width: 100%;
+            max-width: 100%; /* Agar gambar tidak melebar */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px; /* Memberikan ruang di bawah gambar */
+        }
+
+        /* Styling untuk kontainer */
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 1100px;
+            background: #f2f2f2;
+        }
+
+        /* Menambahkan responsivitas pada header */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Gambar responsif di dalam kontainer */
+        .container img {
+            width: 100%; /* Membuat gambar responsif */
+            max-width: 100%; /* Agar gambar tidak melebar dari kontainer */
+            height: auto; /* Menjaga aspek rasio gambar */
+            object-fit: cover; /* Menyesuaikan gambar agar terpotong dengan proporsional jika diperlukan */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px; /* Memberikan ruang di bawah gambar */
+        }
+
+        /* Untuk gambar dalam grid item */
+        .grid-item img {
+            width: 100%; /* Membuat gambar responsif dalam grid item */
+            height: auto; /* Menjaga aspek rasio gambar */
+            object-fit: cover; /* Menyesuaikan gambar dengan proporsional tanpa distorsi */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px;
+        }
+
+        /* Menambahkan footer yang menarik */
+        footer {
+            background-color: #d3a298;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            padding: 10px 20px;
+            background-color: #5c4033;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .back-link a:hover {
+            background-color: #5c4033;
+        }
+
+        iframe {
+    width: 100%;  /* Membuat video menyesuaikan lebar kontainer */
+    height: auto; /* Menjaga aspek rasio video */
+    max-width: 100%; /* Menghindari video melebar melebihi kontainer */
+    border-radius: 10px; /* Menambahkan border radius jika diinginkan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada video */
+    margin-bottom: 20px; /* Memberikan ruang di bawah video */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Penampilan Teater</h1>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <img src="gtea.png" alt="Teater"> 
+            <p>Teater adalah bentuk seni pertunjukan yang menggabungkan elemen-elemen seperti akting, musik, tari, dan dialog untuk menyampaikan cerita, ide, atau emosi kepada penonton. Teater memiliki sejarah panjang sebagai sarana ekspresi budaya, di mana para aktor berperan sebagai perantara antara cerita yang ingin disampaikan dan audiens yang menikmati pertunjukan tersebut. Dalam teater, peran serta interaksi antara aktor dan penonton sangat penting untuk menciptakan pengalaman emosional dan intelektual yang mendalam. Berbagai jenis teater dapat ditemukan, dari yang tradisional hingga modern, yang masing-masing memiliki cara unik untuk mengungkapkan ide-ide dan nilai-nilai tertentu.
+                <p> <br>  Teater yang diselenggarakan dalam konteks Sabtu Budaya mengintegrasikan seni pertunjukan dengan tujuan melestarikan dan memperkenalkan berbagai kebudayaan lokal kepada masyarakat luas. Sabtu Budaya sering kali menjadi ajang bagi komunitas seni untuk menampilkan berbagai bentuk teater yang mengangkat tema-tema budaya, sejarah, dan kisah-kisah lokal. Acara ini tidak hanya menjadi wadah bagi seniman untuk berkreasi, tetapi juga menciptakan ruang edukatif di mana penonton dapat mengenal dan menghargai keanekaragaman budaya Indonesia melalui pertunjukan teater yang dipentaskan.   
+                <p> <br> Dalam acara Sabtu Budaya, teater berperan penting sebagai media untuk menggali dan menyebarkan nilai-nilai budaya yang terkandung dalam cerita tradisional atau kontemporer. Teater menjadi sarana untuk menghubungkan masyarakat dengan warisan budaya mereka, sekaligus membuka ruang diskusi tentang tantangan dan perkembangan budaya di era modern. Melalui teater yang ditampilkan dalam Sabtu Budaya, masyarakat tidak hanya terhibur, tetapi juga memperoleh pemahaman yang lebih mendalam tentang pentingnya pelestarian budaya dan seni dalam kehidupan sehari-hari. Teater di Sabtu Budaya menjadi simbol bagaimana seni dapat memainkan peran penting dalam memelihara identitas budaya suatu bangsa.</div>
+    </section>
+
+    <section class="konten aktif" id="beranda">
+        <h2>Contoh Teater</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Bandung Bondowoso</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/P-7WF_a9yZY?si=MKnkZ7toSQWGA6Wh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p> Teater Bandung Bondowoso adalah sebuah kelompok teater yang dikenal dengan karya-karya mereka yang mengangkat tema-tema budaya, sejarah, dan kehidupan sosial di Indonesia, khususnya yang berkaitan dengan nilai-nilai lokal. Dalam setiap pertunjukannya, Teater Bandung Bondowoso berusaha untuk menyampaikan pesan-pesan mendalam melalui dramatisasi cerita-cerita yang menggugah emosi dan pemikiran penonton. Keterlibatannya dalam kegiatan Sabtu Budaya sangat relevan, karena acara ini memberikan platform bagi kelompok-kelompok seni seperti Teater Bandung Bondowoso untuk menampilkan karya-karya mereka yang mengedepankan kekayaan budaya Indonesia. Melalui kegiatan Sabtu Budaya, Teater Bandung Bondowoso dapat memperkenalkan karya mereka kepada masyarakat yang lebih luas, sekaligus memperkuat peran teater dalam pelestarian dan pengenalan budaya lokal kepada generasi muda.</p>
+                </div>
+            <div class="grid-item">
+                <h3>Keong Mas</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zd-X41UhmeU?si=mllRQNwwmEycRJGm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Teater Keong Mas adalah sebuah kelompok teater yang terkenal dengan pertunjukan-pertunjukannya yang memadukan unsur-unsur tradisional dan modern, sering kali mengangkat tema-tema sosial dan budaya Indonesia. Dengan pendekatan kreatif yang mengedepankan inovasi dalam seni peran dan panggung, Teater Keong Mas menjadi salah satu pionir dalam dunia teater Indonesia. Keterlibatannya dalam kegiatan Sabtu Budaya memberikan kesempatan bagi kelompok ini untuk menampilkan karya-karya mereka yang sarat dengan nilai-nilai lokal, sekaligus memberikan ruang bagi masyarakat untuk menikmati pertunjukan yang mendalam dan edukatif. Melalui Sabtu Budaya, Teater Keong Mas berkontribusi dalam pelestarian dan promosi kebudayaan Indonesia, menjadikannya sebagai ajang yang mempertemukan seni pertunjukan dengan audiens yang lebih luas dan beragam.</p> 
+                </div>
+            <div class="grid-item">
+                <h3>Putri Mandalika</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bXmhONT72TQ?si=OGbOuE2TsUi0k3NZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Teater Putri Mandalika adalah kelompok teater yang terkenal dengan karya-karya mereka yang mengangkat cerita-cerita legenda dan mitologi Indonesia, khususnya yang berasal dari Nusa Tenggara Barat. Kelompok ini berfokus pada penyampaian cerita-cerita tradisional dengan pendekatan yang kreatif dan modern, menghadirkan kekayaan budaya lokal melalui seni pertunjukan. Keterlibatan Teater Putri Mandalika dalam kegiatan Sabtu Budaya sangat relevan, karena acara ini memberikan platform bagi mereka untuk memperkenalkan karya-karya yang mengangkat kisah-kisah lokal dan nilai-nilai budaya kepada masyarakat luas. Melalui Sabtu Budaya, Teater Putri Mandalika tidak hanya menghibur penonton, tetapi juga berperan dalam pelestarian warisan budaya Indonesia, memperkuat identitas budaya daerah, dan menjangkau generasi muda yang semakin tertarik dengan seni pertunjukan tradisional.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="back-link">
+            <a href="http://localhost/PUNYA%20PYA/bismillah.uas.php">Kembali ke Beranda</a>
+        </div>
+    </footer>
+
+
+</body>
+</html>

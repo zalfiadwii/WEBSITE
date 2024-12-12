@@ -1,0 +1,211 @@
+
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pameran Kerajinan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3ec; /* Coklat muda */
+            color: #5c4033; /* Coklat tua */
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #d3a298; /* Coklat lembut */
+            padding: 30px 0;
+            text-align: center;
+            color: rgb(129, 84, 49);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Mengatur tata letak grid untuk tiga kolom */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif dengan grid auto */
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Styling untuk setiap item grid */
+        .grid-item {
+            background: linear-gradient(145deg, #f2f2f2, #e6e6e6); /* Warna latar belakang gradien */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efek saat item disorot */
+        .grid-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling untuk judul */
+        h3 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Styling untuk paragraf */
+        p {
+            font-size: 1rem;
+            color: #34495e;
+            line-height: 1.5;
+            text-align: justify; /* Menambahkan justify agar teks rata kiri-kanan */
+        }
+
+        /* Gambar responsif */
+        .container img {
+            width: 100%;
+            max-width: 100%; /* Agar gambar tidak melebar */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px; /* Memberikan ruang di bawah gambar */
+        }
+
+        /* Styling untuk kontainer */
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 1100px;
+            background: #f2f2f2;
+        }
+
+        /* Menambahkan responsivitas pada header */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Gambar responsif di dalam kontainer */
+        .container img {
+            width: 100%; /* Membuat gambar responsif */
+            max-width: 100%; /* Agar gambar tidak melebar dari kontainer */
+            height: auto; /* Menjaga aspek rasio gambar */
+            object-fit: cover; /* Menyesuaikan gambar agar terpotong dengan proporsional jika diperlukan */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px; /* Memberikan ruang di bawah gambar */
+        }
+
+        /* Untuk gambar dalam grid item */
+        .grid-item img {
+            width: 100%; /* Membuat gambar responsif dalam grid item */
+            height: auto; /* Menjaga aspek rasio gambar */
+            object-fit: cover; /* Menyesuaikan gambar dengan proporsional tanpa distorsi */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px;
+        }
+
+        /* Menambahkan footer yang menarik */
+        footer {
+            background-color: #d3a298;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            padding: 10px 20px;
+            background-color: #5c4033;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .back-link a:hover {
+            background-color: #5c4033;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pameran Kerajinan</h1>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <img src="g5.png" alt="Pameran Kerajinan"> 
+            <p>Pameran kerajinan yang diadakan pada kegiatan Sabtu Budaya menjadi salah satu daya tarik utama yang memperkenalkan keindahan dan keunikan produk-produk kerajinan tangan dari berbagai daerah di Indonesia. Berbagai macam kerajinan, seperti anyaman, ukiran, batik, tenun, dan perhiasan tradisional, dipamerkan dengan detail yang menonjolkan keahlian pengrajin lokal. Setiap karya memiliki ciri khas tersendiri yang mencerminkan kekayaan budaya dan tradisi daerah asalnya. Pameran ini tidak hanya menawarkan kesempatan bagi pengunjung untuk membeli produk kerajinan yang berkualitas, tetapi juga memberikan wawasan mengenai proses pembuatan dan filosofi yang terkandung dalam setiap karya. Melalui pameran kerajinan di Sabtu Budaya, masyarakat dapat lebih menghargai seni tangan lokal dan mendukung pelestarian warisan budaya yang ada.</p>
+            </div>
+    </section>
+
+    <section class="konten aktif" id="beranda">
+        <h2>Contoh Kerajinan</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Makrame</h3>
+                <img src="makrame.jpg" alt="Makrame">
+                <p>Pameran kerajinan makrame yang diadakan pada kegiatan Sabtu Budaya menampilkan keindahan seni simpul tali yang kini semakin populer sebagai bentuk kerajinan tangan yang unik dan estetis. Kerajinan makrame, yang biasanya berupa hiasan dinding, tas, gelang, dan aksesori rumah lainnya, dihasilkan melalui teknik mengikat tali dengan pola-pola tertentu untuk menciptakan desain yang menarik dan bertekstur. Setiap karya makrame yang dipamerkan mencerminkan kreativitas dan keterampilan pengrajin dalam mengolah bahan sederhana menjadi produk seni yang bernilai. Pameran ini memberikan kesempatan bagi pengunjung untuk mengapresiasi keindahan makrame, serta membeli produk-produk handmade yang tidak hanya fungsional tetapi juga memperkaya estetika ruang. Dengan adanya pameran ini, Sabtu Budaya turut berperan dalam memperkenalkan dan melestarikan kerajinan makrame sebagai bagian dari seni tangan kontemporer yang semakin digemari.</p>
+                </div>
+            <div class="grid-item">
+                <h3>Ecoprint</h3>
+                <img src="eco.jpg.png" alt="Ecoprint">
+                <p>Pameran kerajinan ecoprint yang hadir dalam kegiatan Sabtu Budaya menampilkan keindahan seni cetak alami yang menggabungkan kreativitas dengan kelestarian alam. Ecoprint adalah teknik pencetakan gambar atau pola dari bahan-bahan alami, seperti daun, bunga, dan tumbuhan lainnya, yang ditekan pada kain atau kertas untuk menciptakan desain yang indah dan organik. Setiap karya ecoprint yang dipamerkan mencerminkan keunikan dan keindahan alam, dengan pola-pola yang dihasilkan dari proses alami yang memanfaatkan bahan-bahan ramah lingkungan. Pameran ini memberikan kesempatan bagi pengunjung untuk melihat langsung proses pembuatan ecoprint dan membeli karya seni yang mengusung prinsip keberlanjutan. Melalui pameran kerajinan ecoprint di Sabtu Budaya, masyarakat dapat lebih mengenal seni yang ramah lingkungan ini, sekaligus mendukung upaya pelestarian alam dan budaya kerajinan lokal yang kreatif.</p>
+                <p><br>
+                <p><br>
+                <p><br>
+            </div>
+            <div class="grid-item">
+                <h3>Kerajinan Anyaman</h3>
+                <img src="anyaman.png" alt="Anyaman">
+                <p>Pameran kerajinan anyaman yang diadakan pada kegiatan Sabtu Budaya menampilkan keindahan dan ketelitian seni tangan yang terbuat dari bahan alami seperti bambu, rotan, pandan, dan daun lontar. Anyaman tradisional ini mencakup berbagai produk, mulai dari tas, tikar, keranjang, hingga aksesori rumah tangga, yang dibuat dengan teknik menganyam yang telah diwariskan turun-temurun. Setiap karya anyaman yang dipamerkan mencerminkan keterampilan pengrajin dalam menciptakan desain yang tidak hanya estetis, tetapi juga fungsional dan ramah lingkungan. Melalui pameran ini, pengunjung dapat mengapresiasi keindahan kerajinan anyaman yang menggabungkan tradisi dengan kreativitas modern, sekaligus mendukung pelestarian budaya lokal dan upaya untuk menjaga kelestarian alam dengan menggunakan bahan-bahan alami. Sabtu Budaya memberikan kesempatan untuk mengenal lebih dalam tentang kerajinan anyaman, sambil menikmati produk-produk unik yang menggambarkan kearifan lokal.</p>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="back-link">
+            <a href="http://localhost/PUNYA%20PYA/bismillah.uas.php">Kembali ke Beranda</a>
+        </div>
+    </footer>
+
+
+</body>
+</html>

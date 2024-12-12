@@ -1,0 +1,211 @@
+
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bazar Makanan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3ec; /* Coklat muda */
+            color: #5c4033; /* Coklat tua */
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #d3a298; /* Coklat lembut */
+            padding: 30px 0;
+            text-align: center;
+            color: rgb(129, 84, 49);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Mengatur tata letak grid untuk tiga kolom */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif dengan grid auto */
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Styling untuk setiap item grid */
+        .grid-item {
+            background: linear-gradient(145deg, #f2f2f2, #e6e6e6); /* Warna latar belakang gradien */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efek saat item disorot */
+        .grid-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling untuk judul */
+        h3 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Styling untuk paragraf */
+        p {
+            font-size: 1rem;
+            color: #34495e;
+            line-height: 1.5;
+            text-align: justify; /* Menambahkan justify agar teks rata kiri-kanan */
+        }
+
+        /* Gambar responsif */
+        .container img {
+            width: 100%;
+            max-width: 100%; /* Agar gambar tidak melebar */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px; /* Memberikan ruang di bawah gambar */
+        }
+
+        /* Styling untuk kontainer */
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 1100px;
+            background: #f2f2f2;
+        }
+
+        /* Menambahkan responsivitas pada header */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Gambar responsif di dalam kontainer */
+        .container img {
+            width: 100%; /* Membuat gambar responsif */
+            max-width: 100%; /* Agar gambar tidak melebar dari kontainer */
+            height: auto; /* Menjaga aspek rasio gambar */
+            object-fit: cover; /* Menyesuaikan gambar agar terpotong dengan proporsional jika diperlukan */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px; /* Memberikan ruang di bawah gambar */
+        }
+
+        /* Untuk gambar dalam grid item */
+        .grid-item img {
+            width: 100%; /* Membuat gambar responsif dalam grid item */
+            height: auto; /* Menjaga aspek rasio gambar */
+            object-fit: cover; /* Menyesuaikan gambar dengan proporsional tanpa distorsi */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px;
+        }
+
+        /* Menambahkan footer yang menarik */
+        footer {
+            background-color: #d3a298;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            padding: 10px 20px;
+            background-color: #5c4033;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .back-link a:hover {
+            background-color: #5c4033;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bazar Makanan</h1>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <img src="g6.png" alt="Bazar Makanan"> 
+            <p>Pada kegiatan Sabtu Budaya, salah satu daya tarik yang tidak kalah penting adalah adanya bazar makanan yang menyajikan berbagai kuliner khas dari berbagai daerah di Indonesia. Bazar ini memberikan kesempatan bagi pengunjung untuk mencicipi berbagai hidangan tradisional yang kaya akan rasa dan sejarah, sekaligus memperkenalkan kekayaan kuliner lokal kepada masyarakat. Selain menjadi ajang untuk menikmati makanan lezat, bazar makanan dalam Sabtu Budaya juga berfungsi sebagai sarana untuk melestarikan dan mempromosikan kuliner tradisional yang mungkin sudah jarang ditemui di kehidupan sehari-hari. Kehadiran bazar makanan ini semakin memperkaya pengalaman budaya para pengunjung, menjadikannya sebagai acara yang tidak hanya menyuguhkan seni pertunjukan, tetapi juga memberi kesempatan untuk menikmati keanekaragaman rasa yang ada di Indonesia.</p>
+            </div>
+    </section>
+
+    <section class="konten aktif" id="beranda">
+        <h2>Contoh Menu Jananan Tradisional</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Getuk</h3>
+                <img src="getuk.jpg" alt="Getuk">
+                <p>Makanan tradisional getuk yang hadir di bazar pada kegiatan Sabtu Budaya menjadi salah satu daya tarik kuliner yang menyuguhkan cita rasa khas Indonesia. Getuk, yang terbuat dari singkong yang direbus dan dihaluskan, kemudian diberi pemanis seperti kelapa parut dan gula merah, menawarkan rasa manis yang lembut dengan tekstur kenyal. Makanan ini tidak hanya populer di beberapa daerah di Jawa, tetapi juga memiliki berbagai variasi tergantung pada daerah asalnya. Kehadiran getuk di bazar Sabtu Budaya memberikan kesempatan bagi pengunjung untuk menikmati hidangan tradisional yang kaya rasa dan sejarah, sekaligus melestarikan kuliner lokal yang menjadi bagian dari warisan budaya Indonesia. Dengan tampilnya getuk dalam bazar ini, Sabtu Budaya juga mengajak masyarakat untuk lebih mengenal dan menghargai makanan tradisional yang kaya akan nilai budaya.</p>
+                </div>
+            <div class="grid-item">
+                <h3>Kelepon</h3>
+                <img src="kelepon.jpg" alt="Kelepon">
+                <p>Makanan tradisional kelepon yang tersedia di bazar pada kegiatan Sabtu Budaya menawarkan kelezatan khas Indonesia yang sulit dilupakan. Kelepon terbuat dari ketan yang diisi dengan gula merah cair di dalamnya, kemudian dibentuk bulat kecil dan dilapisi dengan kelapa parut. Saat digigit, gula merahnya meleleh dan memberikan sensasi manis yang nikmat, sementara tekstur ketannya yang kenyal dan kelapa parut memberikan rasa gurih yang seimbang. Kelepon adalah camilan tradisional yang populer di berbagai daerah, terutama di Jawa dan Bali, dan menjadi salah satu makanan khas yang menggugah selera. Kehadiran kelepon di bazar Sabtu Budaya tidak hanya menawarkan kelezatan, tetapi juga melestarikan kuliner lokal, memberikan kesempatan kepada pengunjung untuk menikmati rasa autentik yang merupakan bagian dari kekayaan budaya Indonesia.</p>
+                <p><br>
+                <p><br>
+                <p><br>
+            </div>
+            <div class="grid-item">
+                <h3>Bubur Ketan</h3>
+                <img src="ketan.jpg" alt="Bubur Ketan">
+                <p>Makanan tradisional bubur ketan yang hadir di bazar pada kegiatan Sabtu Budaya merupakan hidangan manis yang menggabungkan tekstur ketan yang lembut dengan rasa gurih dan manis yang nikmat. Bubur ketan biasanya terbuat dari ketan hitam atau ketan putih yang dimasak dengan santan, sehingga menghasilkan rasa yang kaya dan creamy. Hidangan ini seringkali disajikan dengan tambahan gula merah cair, kacang, dan kelapa parut, yang semakin memperkaya rasa dan menambah kenikmatan setiap suapan. Kehadiran bubur ketan di bazar Sabtu Budaya menjadi cara yang sempurna untuk mengenalkan kuliner tradisional Indonesia yang sederhana namun penuh rasa. Melalui sajian ini, pengunjung dapat merasakan kekayaan rasa yang menggugah selera dan sekaligus belajar untuk menghargai warisan kuliner lokal yang telah ada sejak lama.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="back-link">
+            <a href="http://localhost/PUNYA%20PYA/bismillah.uas.php">Kembali ke Beranda</a>
+        </div>
+    </footer>
+
+
+</body>
+</html>

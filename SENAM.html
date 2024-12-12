@@ -1,0 +1,203 @@
+
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pameran Kerajinan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3ec; /* Coklat muda */
+            color: #5c4033; /* Coklat tua */
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #d3a298; /* Coklat lembut */
+            padding: 30px 0;
+            text-align: center;
+            color: rgb(129, 84, 49);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Mengatur tata letak grid untuk tiga kolom */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif dengan grid auto */
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Styling untuk setiap item grid */
+        .grid-item {
+            background: linear-gradient(145deg, #f2f2f2, #e6e6e6); /* Warna latar belakang gradien */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efek saat item disorot */
+        .grid-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling untuk judul */
+        h3 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Styling untuk paragraf */
+        p {
+            font-size: 1rem;
+            color: #34495e;
+            line-height: 1.5;
+            text-align: justify; /* Menambahkan justify agar teks rata kiri-kanan */
+        }
+
+        /* Gambar responsif */
+        .container img {
+            width: 100%;
+            max-width: 100%; /* Agar gambar tidak melebar */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px; /* Memberikan ruang di bawah gambar */
+        }
+
+        /* Styling untuk kontainer */
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 1100px;
+            background: #f2f2f2;
+        }
+
+        /* Menambahkan responsivitas pada header */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Gambar responsif di dalam kontainer */
+        .container img {
+            width: 100%; /* Membuat gambar responsif */
+            max-width: 100%; /* Agar gambar tidak melebar dari kontainer */
+            height: auto; /* Menjaga aspek rasio gambar */
+            object-fit: cover; /* Menyesuaikan gambar agar terpotong dengan proporsional jika diperlukan */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px; /* Memberikan ruang di bawah gambar */
+        }
+
+        /* Untuk gambar dalam grid item */
+        .grid-item img {
+            width: 100%; /* Membuat gambar responsif dalam grid item */
+            height: auto; /* Menjaga aspek rasio gambar */
+            object-fit: cover; /* Menyesuaikan gambar dengan proporsional tanpa distorsi */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px;
+        }
+
+        /* Menambahkan footer yang menarik */
+        footer {
+            background-color: #d3a298;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            padding: 10px 20px;
+            background-color: #5c4033;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .back-link a:hover {
+            background-color: #5c4033;
+        }
+        iframe {
+    width: 100%;  /* Membuat video menyesuaikan lebar kontainer */
+    max-width: 100%; /* Menghindari video melebar melebihi kontainer */
+    border-radius: 10px; /* Menambahkan border radius jika diinginkan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada video */
+    margin-bottom: 20px; /* Memberikan ruang di bawah video */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Senam</h1>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>Senam Gemar Gatra</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6UuYNUUkBPs?si=Su8lcyWXojAFseVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Senam Gemar Gatra, singkatan dari “Gerakan Masyarakat Giat Raga,” adalah salah satu bentuk olahraga kebugaran yang diciptakan untuk meningkatkan kesadaran masyarakat tentang pentingnya aktivitas fisik dalam kehidupan sehari-hari. Senam ini dirancang dengan gerakan yang mudah diikuti, bervariasi, dan sesuai dengan kebutuhan tubuh, sehingga dapat dilakukan oleh berbagai kalangan usia, mulai dari anak-anak hingga orang dewasa.
+                <p>Senam Gemar Gatra memiliki tujuan utama untuk membangun kebiasaan hidup sehat melalui aktivitas fisik yang menyenangkan. Dalam rutinitas sehari-hari yang semakin sibuk, banyak orang melupakan pentingnya meluangkan waktu untuk berolahraga. Senam ini hadir sebagai solusi, karena dapat dilakukan di mana saja—baik di sekolah, tempat kerja, maupun lingkungan komunitas. Selain itu, senam ini tidak memerlukan peralatan khusus, sehingga lebih mudah diakses oleh semua lapisan masyarakat.               
+                <p>Gerakan dalam Senam Gemar Gatra disusun dengan mempertimbangkan aspek kesehatan dan keselamatan. Dimulai dengan gerakan pemanasan untuk mempersiapkan tubuh, diikuti dengan gerakan inti yang melibatkan berbagai otot, hingga ditutup dengan pendinginan yang bertujuan untuk mengembalikan tubuh ke kondisi normal. Gerakan-gerakan ini dirancang agar dapat meningkatkan kelenturan, kekuatan, daya tahan, serta keseimbangan tubuh.               
+                <p>Salah satu keunggulan Senam Gemar Gatra adalah perpaduan antara gerakan yang enerjik dan irama musik yang dinamis. Musik yang digunakan dalam senam ini memiliki tempo yang sesuai dengan ritme gerakan, sehingga mampu membangkitkan semangat peserta. Irama yang menyenangkan juga membuat senam ini terasa seperti aktivitas rekreasi yang menyegarkan, bukan sekadar olahraga biasa.                
+                <p>Manfaat Senam Gemar Gatra tidak hanya dirasakan secara fisik, tetapi juga secara mental. Aktivitas fisik seperti senam dapat merangsang pelepasan hormon endorfin yang membuat seseorang merasa lebih bahagia dan rileks. Selain itu, kegiatan senam yang dilakukan secara berkelompok juga dapat mempererat hubungan sosial, karena peserta diajak untuk bergerak bersama dalam suasana yang penuh kebersamaan dan kekompakan.                
+                <p>Pemerintah dan berbagai lembaga masyarakat telah mendorong pelaksanaan Senam Gemar Gatra sebagai bagian dari kampanye hidup sehat. Senam ini sering kali menjadi agenda rutin dalam acara-acara besar, seperti peringatan Hari Kesehatan Nasional, kegiatan olahraga di sekolah, hingga aktivitas senam bersama di komunitas. Upaya ini bertujuan untuk menjangkau lebih banyak orang dan menanamkan kebiasaan hidup sehat sejak dini.               
+                <p>Namun, tantangan tetap ada dalam menggalakkan Senam Gemar Gatra di masyarakat. Salah satu hambatannya adalah kurangnya pemahaman akan pentingnya olahraga dan gaya hidup sehat. Untuk itu, edukasi mengenai manfaat senam perlu terus ditingkatkan, baik melalui media, sosialisasi langsung, maupun integrasi dalam kurikulum pendidikan. Selain itu, perlu adanya dukungan dari berbagai pihak, seperti komunitas, sekolah, dan instansi pemerintah, agar Senam Gemar Gatra menjadi bagian dari gaya hidup sehari-hari masyarakat.                
+                <p>Dengan rutin melakukan Senam Gemar Gatra, masyarakat dapat merasakan banyak manfaat, seperti peningkatan kebugaran tubuh, penurunan risiko penyakit kronis, hingga peningkatan kualitas hidup secara keseluruhan. Senam ini tidak hanya menjadikan tubuh lebih sehat, tetapi juga menciptakan individu yang lebih produktif dan bahagia.           
+                <p>Senam Gemar Gatra adalah simbol semangat hidup sehat yang sederhana namun berdampak besar. Melalui gerakan-gerakan yang energik dan irama yang menyenangkan, senam ini mengajak masyarakat untuk bergerak bersama menuju kehidupan yang lebih baik. Mari kita jadikan Senam Gemar Gatra sebagai bagian dari keseharian kita, untuk tubuh yang sehat, pikiran yang segar, dan masa depan yang lebih cerah.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="back-link">
+            <a href="http://localhost/PUNYA%20PYA/bismillah.uas.php">Kembali ke Beranda</a>
+        </div>
+    </footer>
+
+
+</body>
+</html>

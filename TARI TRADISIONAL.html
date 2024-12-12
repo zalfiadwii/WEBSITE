@@ -1,0 +1,218 @@
+
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tari Tradisional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3ec; /* Coklat muda */
+            color: #5c4033; /* Coklat tua */
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #5c4033; /* Coklat lembut */
+            padding: 30px 0;
+            text-align: center;
+            color: rgb(129, 84, 49);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Mengatur tata letak grid untuk tiga kolom */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif dengan grid auto */
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Styling untuk setiap item grid */
+        .grid-item {
+            background: linear-gradient(145deg, #f2f2f2, #e6e6e6); /* Warna latar belakang gradien */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efek saat item disorot */
+        .grid-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling untuk judul */
+        h3 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Styling untuk paragraf */
+        p {
+            font-size: 1rem;
+            color: #34495e;
+            line-height: 1.5;
+            text-align: justify; /* Menambahkan justify agar teks rata kiri-kanan */
+        }
+
+        /* Gambar responsif */
+        .container img {
+            width: 100%;
+            max-width: 100%; /* Agar gambar tidak melebar */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px; /* Memberikan ruang di bawah gambar */
+        }
+
+        /* Styling untuk kontainer */
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 1100px;
+            background: #f2f2f2;
+        }
+
+        /* Menambahkan responsivitas pada header */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Gambar responsif di dalam kontainer */
+        .container img {
+            width: 100%; /* Membuat gambar responsif */
+            max-width: 100%; /* Agar gambar tidak melebar dari kontainer */
+            height: auto; /* Menjaga aspek rasio gambar */
+            object-fit: cover; /* Menyesuaikan gambar agar terpotong dengan proporsional jika diperlukan */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px; /* Memberikan ruang di bawah gambar */
+        }
+
+        /* Untuk gambar dalam grid item */
+        .grid-item img {
+            width: 100%; /* Membuat gambar responsif dalam grid item */
+            height: auto; /* Menjaga aspek rasio gambar */
+            object-fit: cover; /* Menyesuaikan gambar dengan proporsional tanpa distorsi */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+            margin-bottom: 20px;
+        }
+
+        /* Menambahkan footer yang menarik */
+        footer {
+            background-color: #d3a298;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            padding: 10px 20px;
+            background-color: #5c4033;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .back-link a:hover {
+            background-color: #733d21;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tari Tradisional</h1>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <img src="gtari.png" alt="Budaya Lombok"> 
+            <p>Tari tradisional merupakan salah satu elemen penting dalam kegiatan Sabtu Budaya, yang menjadi ajang untuk memperkenalkan dan melestarikan kekayaan seni tari Indonesia. Dalam acara ini, berbagai jenis tari tradisional dari berbagai daerah dipentaskan, mulai dari tari daerah yang mengangkat kisah-kisah legenda, tarian adat, hingga tarian modern yang tetap mengedepankan unsur tradisional. Melalui tari tradisional, Sabtu Budaya tidak hanya menyuguhkan pertunjukan yang memukau, tetapi juga menjadi sarana untuk mengenalkan nilai-nilai budaya dan filosofi yang terkandung dalam setiap gerakan tari. Acara ini memberikan kesempatan bagi penonton untuk lebih menghargai keberagaman seni tari Indonesia, sambil menikmati kekayaan budaya yang ada di setiap gerakan, kostum, dan irama musik yang mengiringinya.</p>
+
+            </div>
+    </section>
+
+    <section class="konten aktif" id="beranda">
+        <h2>Macam-Macam Tarian Tradisional</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Tari Tor-Tor</h3>
+                <img src="tor.jpg" alt="Tari Tor-Tor">
+                <p>Tari Tor-Tor adalah tarian tradisional yang berasal dari suku Batak di Sumatra Utara, Indonesia. Tarian ini memiliki peran penting dalam berbagai upacara adat, seperti pernikahan, kelahiran, dan upacara keagamaan. Tor-Tor biasanya dipentaskan dengan iringan musik tradisional Batak, yang menggunakan alat musik seperti gondang (gendang), sulim, dan alat musik perkusi lainnya. Gerakan tubuh penari Tor-Tor yang teratur dan penuh makna mencerminkan harmoni dan kekuatan dalam budaya Batak, serta mengekspresikan rasa syukur atau doa kepada Tuhan dan leluhur.
+                    <p> <br> Gerakan Tari Tor-Tor biasanya melibatkan pergerakan kepala, tangan, dan tubuh yang serempak dan energik, dengan penari yang berbaris atau berkelompok. Dalam setiap gerakannya, ada makna simbolik yang menggambarkan keharmonisan, keberanian, dan persatuan masyarakat Batak. Tarian ini sering kali dilakukan dalam keadaan yang sakral, di mana penari dan penonton saling berinteraksi dengan penuh rasa hormat. Selain itu, Tari Tor-Tor juga dikenal dengan gerakan yang mengikuti irama musik yang dinamis, yang mengundang ketegangan dan kekuatan emosional.  
+                    <p> <br> Secara kultural, Tari Tor-Tor bukan hanya sekadar pertunjukan seni, tetapi juga sarana untuk menjaga dan melestarikan tradisi Batak. Tarian ini dipercaya memiliki kekuatan spiritual yang bisa mendatangkan berkat, keselamatan, dan perlindungan bagi masyarakat. Di samping itu, Tari Tor-Tor juga menjadi media untuk menyampaikan pesan-pesan moral dan kebijaksanaan leluhur, serta mempererat hubungan sosial dalam komunitas Batak. Tari Tor-Tor juga telah dikenal luas sebagai simbol identitas budaya Batak yang mencerminkan kekayaan seni dan nilai-nilai luhur masyarakatnya.</p>
+                </div>
+            <div class="grid-item">
+                <h3>Tari Saman</h3>
+                <img src="saman.jpg" alt="Tari Saman">
+                <p>Tari Saman adalah tarian tradisional yang berasal dari Aceh, Indonesia. Tarian ini dikenal dengan gerakannya yang cepat, serempak, dan penuh energi, diiringi dengan nyanyian atau doa-doa khas yang dipimpin oleh seorang pemimpin kelompok. Tari Saman sering kali dipentaskan dalam acara-acara besar, seperti perayaan budaya, upacara keagamaan, atau pesta rakyat. Gerakan para penari yang duduk saling berdekatan menciptakan harmoni yang indah, di mana tangan dan tubuh mereka bergerak serentak mengikuti irama musik yang dipimpin oleh seorang penari utama. Keunikan dari Tari Saman terletak pada keseragaman dan kecepatan gerakan tangan serta ketepatan waktu dalam mengikuti irama.
+                    <p> <br>Secara tradisional, Tari Saman dilaksanakan oleh sekelompok penari pria atau wanita yang mengenakan pakaian adat khas Aceh. Mereka duduk membentuk lingkaran atau barisan, lalu mulai bergerak dengan lincah sesuai dengan irama yang ada. Tari ini menggabungkan gerakan tubuh, tepukan tangan, serta nyanyian yang merupakan bagian dari budaya Aceh. Dalam pertunjukan Tari Saman, penari tidak hanya menunjukkan keterampilan dalam gerakan fisik, tetapi juga kemampuan mereka dalam menjaga kekompakan kelompok, karena keindahan tarian ini terletak pada keserasian gerakan yang dilakukan bersama-sama.
+                    <p> <br>Selain sebagai seni pertunjukan, Tari Saman juga memiliki makna mendalam dalam budaya Aceh. Tarian ini sering digunakan untuk menyampaikan pesan moral, doa, dan harapan kepada Tuhan. Beberapa versi dari Tari Saman juga digunakan dalam acara keagamaan atau dalam rangka memperingati peristiwa sejarah tertentu. Bahkan, sejak tahun 2011, Tari Saman telah diakui oleh UNESCO, yang menunjukkan betapa pentingnya tarian ini dalam mempertahankan dan memperkenalkan budaya Aceh kepada dunia. Tari Saman bukan hanya sebuah tarian, tetapi juga simbol kebersamaan, kekompakan, dan kekuatan kolektif dalam masyarakat Aceh.</p>
+                    <p> <br>
+                    <p> <br>
+            
+                </div>
+            <div class="grid-item">
+                <h3>Tari Piring</h3>
+                <img src="piring.jpg" alt="Tari Saman">
+                <p>Tari Piring adalah salah satu tarian tradisional yang berasal dari Sumatra Barat, yang dikenal karena keunikannya dalam menggunakan piring sebagai properti utama dalam pertunjukan. Dalam tarian ini, para penari memegang piring di tangan kanan dan kiri mereka, kemudian melakukan berbagai gerakan yang anggun dan lincah sambil menyeimbangkan piring tersebut agar tidak jatuh. Tari Piring sering dipentaskan dalam acara-acara adat Minangkabau, seperti pesta pernikahan, upacara penyambutan tamu, dan perayaan lainnya. Tarian ini mencerminkan kegembiraan dan kekuatan fisik penari, yang terampil menari dengan mengandalkan keseimbangan dan keterampilan tangan.
+                    <p> <br> Gerakan dalam Tari Piring sangat dinamis dan berirama, diiringi dengan musik tradisional Minangkabau yang menggunakan alat musik seperti talempong, gendang, dan saluang. Para penari, yang biasanya terdiri dari perempuan, memperlihatkan keterampilan mereka dalam menggerakkan tubuh dengan lincah dan elegan sambil menjaga keseimbangan piring yang mereka pegang. Piring yang digunakan dalam tarian ini bukan hanya sekadar properti, tetapi juga menjadi simbol dalam budaya Minangkabau yang melambangkan keseimbangan hidup, keharmonisan, dan keceriaan.
+                    <p> <br> Secara budaya, Tari Piring memiliki nilai simbolis yang dalam, terutama dalam konteks kehidupan sosial dan adat Minangkabau. Tarian ini sering kali digunakan untuk menyambut tamu penting atau merayakan acara-acara besar, menciptakan suasana yang penuh keceriaan dan kebersamaan. Selain itu, Tari Piring juga dianggap sebagai sarana untuk menunjukkan keberanian, ketangkasan, dan keindahan budaya Minangkabau kepada masyarakat luas. Melalui tarian ini, masyarakat Minangkabau tidak hanya mempertahankan warisan budaya mereka, tetapi juga menunjukkan rasa hormat kepada tradisi yang telah diwariskan oleh leluhur mereka.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="back-link">
+            <a href="http://localhost/PUNYA%20PYA/bismillah.uas.php">Kembali ke Beranda</a>
+        </div>
+    </footer>
+
+
+</body>
+</html>
